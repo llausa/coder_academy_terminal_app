@@ -4,15 +4,15 @@
 
 #### Problem
   Promising yourself that you'll use the latest and greatest to-do app is well and good *BUT* let's be honest...
-  How often do we actually stick with it? Especially if we have to click away from the apps we usually have on, to open a new website/app, then login *AND* only then get to use the calendar.
+  How often do we actually stick with it? Especially if we have to click away from the apps we usually have on, to open a new website/app, then login *AND* only then get to use the application.
 
   What about checking what needs to be done/attended?
   *GAH*!!! Open a new browser, login, and now check to see what needs to be done...
   That's really painful...
 
-  Keeping track of what needs to be done is hard for anyone who has a normal job. Keeping track of to-do items is usually done in a calendar or on paper (environment rip).
+  Keeping track of what needs to be done is hard for anyone who has a normal job. Keeping track of to-do items is usually done in a calendar or on paper.
 
-  Losing your to-do piece of paper or forgetting your notebook calendar can ruin a day or set you back a lot.
+  Losing your to-do piece of paper or forgetting your calendar notebook can ruin a day or set you back a lot.
 
   Why not digitise this and have it on you at all times instead?
 
@@ -27,21 +27,19 @@
 
   This was by far one of the most effective time management strategies I utilised as a Project Manager. But I hated life when my calendar notebook was left at home. And using A4 paper to keep track of which clients I had to call back/emails I needed to send while working at a Tech Startup seemed backward.
 
-  The main idea behind this app is to digitise everything around the trusty to-do list you may see being used around the world - especially for people who have their Terminal app open most of the time!
+  The main idea behind this app is to digitise everything around the trusty to-do list you may see being used around the world.
 
   With Santiago's Humble To-Do App, Users can keep track of to-do items and check everything that is outstanding right through the Users' Terminal App!
   If Users complete any of the to-do items (yay!), they can just mark them as complete too.
 
   And for the sake of posterity, Users can ask the app to send them an email digest of outstanding items straight to their email inbox. Yaaaaaaasss!
 
-  Or they can let the automatic mailer send the digest (6pm mon-fri only) automatically.
-
 #### UI/UX
   Santiago's Humble To-Do App is a productivity terminal application.
   The User has a couple of options right from the get-go. They can either run the <main file>.rb file with command line arguments for their name, email and existing to-do lists (in txt format).
   This will be explained in the documentation of the project.
 
-  <pic of user passing command line arguments along with ruby <main file>.rb in console/terminal>
+  ![command line args](github link)
 
   Or they can boot up the app without any command line arguments. They will then be taken through a sequence that queries them for their name and email. A to-do list will be automatically generated for that day.
 
