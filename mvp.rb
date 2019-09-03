@@ -6,11 +6,13 @@ require 'sendgrid-ruby'
 require 'pp'
 include SendGrid
 
-puts "Welcome to Santiago's Calendar App\n"
+puts "Welcome to Santiago's To-Do App\n"
+
 
 app_on = true
 t = DateTime.now
 @today = t.strftime '%d-%m-%Y'
+File.new("#{@today}.txt", 'w+')
 def list
   data = File.open("#{@today}.txt").read
   data.each_line.map { |line| JSON.parse(line) }
@@ -29,7 +31,7 @@ def add_to_do(name, due_date)
 
 def complete_to_do(index)
   # @data.delete!(@data['index']=  index)
-  @data.each_with_index { |to_do_item, i|  puts "#{to_do_item}" if to_do_item['index'] == index }  # @data.slice!(i) if to_do_item['index'] == index  }
+  @data.each_with_index { |to_do_item, _i| puts to_do_item.to_s if to_do_item['index'] == index } # @data.slice!(i) if to_do_item['index'] == index  }
   # File.write("#{@today}.txt", @data.map(&:to_json).join("\n"), mode: 'w+')
   # pp @data.class
 end
