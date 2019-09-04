@@ -12,7 +12,7 @@ puts "Welcome to Santiago's To-Do App\n"
 app_on = true
 t = DateTime.now
 @today = t.strftime '%d-%m-%Y'
-File.new("#{@today}.txt", 'w+')
+File.new("#{@today}.txt", 'a')
 def list
   data = File.open("#{@today}.txt").read
   data.each_line.map { |line| JSON.parse(line) }
@@ -21,9 +21,9 @@ end
 @data = list
 
 def add_to_do(name, due_date)
-  max_index = @data.max_by { |arr| arr['index'] }
-  max_index = max_index ? max_index['index'] + 1 : 0
-  to_do_item = { 'index' => max_index, 'name' => name, 'due_date' => due_date }
+  max_id = @data.max_by { |arr| arr['id'] }
+  max_id = max_id ? max_id['id'] + 1 : 1
+  to_do_item = { 'id' => max_id, 'name' => name, 'due_date' => due_date }
   @data.push(to_do_item)
   save_item(to_do_item.to_json)
   pp @data
