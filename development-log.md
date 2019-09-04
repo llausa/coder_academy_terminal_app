@@ -3,10 +3,10 @@
 
   To test the vailidity of my idea, I built a spaghetti code version of my idea (see readme.rd) and played around with the Sendgrid ruby gem. I was a able to successfully send emails to my inbox.
 
-  ![sendgrid emails]()
+  ![sendgrid emails](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_test.png)
 
   But then I got this nice email from sendgrid:
-  ![suspended]()
+  ![suspended](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/suspended_sendgrid.png)
 
   So my sengrid account was suspended because I uploaded my sendgrid api key to my public repo on github. I've learned my lesson.
 
