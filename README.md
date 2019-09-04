@@ -34,8 +34,12 @@
 
   And for the sake of posterity, Users can ask the app to send them an email digest of outstanding items straight to their email inbox. Yaaaaaaasss!
 
+## Status Build
+  This application is currently under construction. Please check back soon!
+
 ## UI/UX
   Santiago's Humble To-Do App is a text-based productivity terminal application.
+
   The User has a couple of options right from the get-go. They can either run the 'shtda.rb' file with command line arguments for their name, email and existing to-do lists (in txt format).
   This will be explained in the help file of the project.
 
@@ -49,7 +53,7 @@
 
   Once the app has "booted up", the User will be shown a menu with all available options they can input (see Features/Scope).
 
-  All app functionality is avaialbe in the documentation file but the User will also be presented with all command options that are available in the app every time the app prompts them for an input. There's even a help section explaining all commands and what they do.
+  All app functionality is availabe in the 'help.md' file but the User will also be presented with all command options that are available in the app every time the app prompts them for an input. There's even a help section explaining all commands and what they do.
 
   ![app_menu](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/app_menu.png)
 
