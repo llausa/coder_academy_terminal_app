@@ -21,7 +21,7 @@
 
   This app is targeted at Software Developers who already have their Terminals open most of the day and wish to record to-do items they are planning to complete.
 
-  SHCA helps you take control of your schedule right from the terminal, without any of the useless fluff.
+  SHTDA helps you take control of your schedule right from the terminal, without any of the useless fluff.
 
   This terminal app helps you deliver the stuff you promised you would deliver.
 
@@ -101,7 +101,7 @@
   <complete after coding up the app>
 
 ## Implementation Plan
-  The Implementation Plan can be found on the following [Trello board](https://trello.com/b/cN91PAk8/shca-terminal-app-coder-academy).
+  The Implementation Plan can be found on the following [Trello board](https://trello.com/b/cN91PAk8/shtda-terminal-app-coder-academy).
 
   The methodology behind the implementation plan is Agile. And the main focus of this project will be to build from User Stories.
 
