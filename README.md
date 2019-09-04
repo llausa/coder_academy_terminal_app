@@ -94,59 +94,23 @@
     finish once code written
 
 ## Control Flow Diagram
+  <complete after coding up the app>
 
-## Requirements
-  * Ruby
-  * JSON
-  * Sendgrid-ruby
+## Implementation Plan
+  The Implementation Plan can be found on the following [Trello board](https://trello.com/b/cN91PAk8/shca-terminal-app-coder-academy).
 
+  The methodology behind the implementation plan is Agile. And the main focus of this project will be to build from User Stories.
 
-#### How to Use the App
-    Santiago's Humble To-Do App is designed to be as intuitive as possible. It lists out all everything that the User needs to do in the order that the App requires.
+  The User Stories will be broken down into the features that will be built by order of importance.
 
-    Once Setup is complete, the User will receive a list of available prompts that will let them navigate through the App's functionality.
+  The items that will take precedence will be labeled as 'MVP' as these need to be built for a Minimum Viable Product for delivery.
 
-    Setup
-    <Setup screenshot>
+  Progress can be tracked on the Trello Board as well as the 'development-log.md' file
 
-    Main Menu
-    <Main Menu screenshot>
+## Tools Used
+  * VSCode
+  * iTerm2
+  * Trello
+  * Github
 
-    To-Do Prompt
-    <to-do prompt screenshot>
-
-    Event Prompt
-    <event prompt screenshot>
-
-
-#### User Stories
-    <trello screenshot>
-
-    [PM Trello Board with User Stories as Project To-Do Items](https://trello.com/b/cN91PAk8/shca-terminal-app-coder-academy)
-
-#### User Workflows
-    <User Workflows Diagram>
-
-#### Design Methodology
-    The boot up, setup and menu sequences were separated onto their own functions to maintain a modularised code base.
-
-    CalendarList, ToDo and Event objects are also separated onto their own classes so that modularity can be maintained and so that data can be more easily manipulated.
-
-    This separation of objects helps maintain a separation between objects that handle data and objects that do not handle data.
-
-    Modular Coding future-proofs and allows any other developer to jump in and refactor/improve the code base.
-
-    The Data created/manipulated inside the App is stored in Hashes and then pushed onto different text files as a replacement for databases. Utilizing gems like JSON, we are able to store large amounts of data and process it effectively when transfering the information from the app, to the text files and back to the app (in the future).
-
-    Tests will be essential to check for and handle data (text file) corruption as well as bootup (for the first time or ongoing).
-
-#### Tools Used
-    * VSCode
-    * iTerm2
-    * Trello
-    * Github
-
-#### Bugs
-    - Easter Egg (nerdy joke generator) not working yet :'(
-
-#### Future Updates
+## Bugs
