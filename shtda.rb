@@ -12,9 +12,9 @@ puts "Welcome to Santiago's To-Do App\n"
 app_on = true
 t = DateTime.now
 @today = t.strftime '%d-%m-%Y'
-File.new("#{@today}.txt", 'a')
+File.new("to_do_lists/#{@today}.txt", 'a')
 def list
-  data = File.open("#{@today}.txt").read
+  data = File.open("to_do_lists/#{@today}.txt").read
   data.each_line.map { |line| JSON.parse(line) }
 end
 
@@ -95,5 +95,5 @@ What would you like to do? Options:
     end
   end
 else
-  File.new("#{@today}.txt", 'w+')
+  File.new("to_do_lists/#{@today}.txt", 'w+')
 end
