@@ -8,13 +8,13 @@ include SendGrid
 
 puts "Welcome to Santiago's To-Do App\n"
 
-
 app_on = true
 t = DateTime.now
 @today = t.strftime '%d-%m-%Y'
-File.new("to_do_lists/#{@today}.txt", 'a')
+
+File.new("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt", 'a')
 def list
-  data = File.open("to_do_lists/#{@today}.txt").read
+  data = File.open("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt").read
   data.each_line.map { |line| JSON.parse(line) }
 end
 
@@ -27,7 +27,7 @@ def add_to_do(name, due_date)
   @data.push(to_do_item)
   save_item(to_do_item.to_json)
   # pp @data
- end
+end
 
 def complete_to_do(index)
   # @data.delete!(@data['index']=  index)
@@ -51,10 +51,10 @@ def send_email
 end
 
 def save_item(item)
-  File.write("#{@today}.txt", "\n#{item}", mode: 'a')
+  File.write("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt", "\n#{item}", mode: 'a')
 end
 
-if File.exist?("#{@today}.txt")
+if File.exist?("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt")
   # code that runs when today.txt exists
 
   while app_on
@@ -95,5 +95,5 @@ What would you like to do? Options:
     end
   end
 else
-  File.new("to_do_lists/#{@today}.txt", 'w+')
+  File.new("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt", 'w+')
 end
