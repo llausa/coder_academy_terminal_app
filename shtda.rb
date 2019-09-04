@@ -37,7 +37,7 @@ def complete_to_do(index)
 end
 
 def send_email
-  from = Email.new(email: 'donotreply@shca.com')
+  from = Email.new(email: 'donotreply@shtda.com')
   to = Email.new(email: 'santiago.chamon@gmail.com')
   subject = "Here is your #{@today} to-do digest!"
   content = Content.new(type: 'text/plain', value: @data.join(",\n"))

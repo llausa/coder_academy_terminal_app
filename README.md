@@ -69,7 +69,7 @@
 
   Invalid User commands will return 'Invalid Command' and data integrity errors will basically force the User into formatting their input txt files in a specific format that can be read by the app.
 
-## Features/Scope:
+## Features:
   Here is the scope of what Users can do:
   * Start the app *with or without* command line arguments
 
