@@ -2,7 +2,7 @@
 
 # Santiago's Humble To-Do App (In the Terminal)
 
-#### Problem
+## Problem
   Promising yourself that you'll use the latest and greatest to-do app is well and good *BUT* let's be honest...
   How often do we actually stick with it? Especially if we have to click away from the apps we usually have on, to open a new website/app, then login *AND* only then get to use the application.
 
@@ -16,7 +16,7 @@
 
   Why not digitise this and have it on you at all times instead?
 
-#### Solution
+## Solution
   Santiago's Humble To-Do App (SHTDA) is designed to help its Users maintain control over their schedules right from their own computer Terminal.
 
   This app is targeted at Software Developers who already have their Terminals open most of the day and wish to record to-do items they are planning to complete.
@@ -34,24 +34,24 @@
 
   And for the sake of posterity, Users can ask the app to send them an email digest of outstanding items straight to their email inbox. Yaaaaaaasss!
 
-#### UI/UX
+## UI/UX
   Santiago's Humble To-Do App is a productivity terminal application.
-  The User has a couple of options right from the get-go. They can either run the <main file>.rb file with command line arguments for their name, email and existing to-do lists (in txt format).
+  The User has a couple of options right from the get-go. They can either run the 'shtda.rb' file with command line arguments for their name, email and existing to-do lists (in txt format).
   This will be explained in the documentation of the project.
 
-  ![command line args](github link)
+  ![command line args](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/command_line_args.png)
 
   Or they can boot up the app without any command line arguments. They will then be taken through a sequence that queries them for their name and email. A to-do list will be automatically generated for that day.
 
-  <pic of user just passing ruby <main file>.rb in console/terminal>
+  ![no command line args](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/no_command_line_args.png)
 
   The starting sequence prepares a text file and the emailing functionality. The text file will serve as a database for each day, where even if the User quits the app (ctrl + c/exit option), their to-do items will not be lost.
 
-  Once the app has "booted up", aka gone through the starting sequence, the User will be shown a menu with all available options they can input (see Features/Scope).
+  Once the app has "booted up", the User will be shown a menu with all available options they can input (see Features/Scope).
 
   All app functionality is avaialbe in the documentation file but the User will also be presented with all command options that are available in the app every time the app prompts them for an input. There's even a help section explaining all commands and what they do.
 
-  <pic of menu options>
+  ![app_menu]()
 
   The User only needs to type the command they want to run when prompted.
 
