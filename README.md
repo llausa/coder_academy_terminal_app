@@ -35,7 +35,7 @@
   And for the sake of posterity, Users can ask the app to send them an email digest of outstanding items straight to their email inbox. Yaaaaaaasss!
 
 ## UI/UX
-  Santiago's Humble To-Do App is a productivity terminal application.
+  Santiago's Humble To-Do App is a text-based productivity terminal application.
   The User has a couple of options right from the get-go. They can either run the 'shtda.rb' file with command line arguments for their name, email and existing to-do lists (in txt format).
   This will be explained in the documentation of the project.
 
@@ -51,29 +51,22 @@
 
   All app functionality is avaialbe in the documentation file but the User will also be presented with all command options that are available in the app every time the app prompts them for an input. There's even a help section explaining all commands and what they do.
 
-  ![app_menu]()
+  ![app_menu](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/app_menu.png)
 
   The User only needs to type the command they want to run when prompted.
 
-  Only valid commands will be accepted by the app while the app is running. Any other commands will return 'Invalid Command'.
-
-  The User will be able to add to-do items to their To-Do List by using the 'add to-do' command. The command will then prompt the User for the description of the to-do and a due date that is optional. This information will be stored locally and written onto the text file for backup.
+  The User will be able to add to-do items to their To-Do List by using the 'add to-do' command. The command will then prompt the User for the description of the to-do and a due date (optional). This information will be stored locally and written onto the text file for backup.
 
   The User will also be able to mark to-do items as complete by using the 'complete to-do' command. After a list of to-do items is presented, the command will prompt the user for the index of the to-do item they want to mark as complete. Marking a to-do item as complete will effectively remove the item for the list and thus totally erase it.
 
-  Error messages will handle events where User input (any sort) deviates from the app's functionality or data integrity (of the day's txt file) is detected.
-
+  Error messages will handle events where User input (any sort) deviates from the app's functionality or data format of command line argument input to-do list files is not correct.
 
   Invalid user commands will return 'Invalid Command' and data integrity errors will basically force the User into formatting their input txt files in a specific format that can be read by the app.
 
-
-
-
-#### MVP Features/Scope:
+## Features/Scope:
   Here is the scope of what users can do:
-  * Run app with existing to-do lists (through command line args)
-    <100 word description>
-  * Start the app with no command line args
+  * Start the app *with* command line arguments *or without* them
+    The
   * Add To-Do Items
   * Mark To-Do Items as complete
   * View List of To-Do Items
@@ -84,11 +77,10 @@
 
 
 #### Requirements
+  * Ruby
   * JSON
   * Sendgrid-ruby
-  * CRON Jobs
-  * Colorize
-  * rubyjokes
+
 
 #### How to Use the App
     Santiago's Humble To-Do App is designed to be as intuitive as possible. It lists out all everything that the User needs to do in the order that the App requires.
