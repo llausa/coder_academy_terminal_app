@@ -23,10 +23,10 @@ end
 def add_to_do(name, due_date)
   max_id = @data.max_by { |arr| arr['id'] }
   max_id = max_id ? max_id['id'] + 1 : 1
-  to_do_item = { 'id' => max_id, 'name' => name, 'due_date' => due_date }
+  pp to_do_item = { 'id' => max_id, 'name' => name, 'due_date' => due_date }
   @data.push(to_do_item)
   save_item(to_do_item.to_json)
-  pp @data
+  # pp @data
  end
 
 def complete_to_do(index)
