@@ -64,12 +64,14 @@
   7. Just follow the prompts and Enjoy!
 
   The App works best when you have it open and running in a Terminal Tab.
-  The target market for this app is Software Developers so all that they need to do to keep track of to-do items is open an additional tab in the Terminal and leave it running until the end of their workday.
+  The target market for this app is Software Developers so all that they need to do to keep track of to-do items is open an additional tab in their Terminal apps, run the app and leave it running until the end of their workday.
 
   When they are about to close down their machines they can review their to-do list, mark any items as complete and send themselves an email digest if they are so inclined.
 
   All you need to run the app is go through this set up document, be in the project's directoy and run
+
       ruby shtda.rb
+
   The app will stay running in your machine until you shut it down. At shutdown, the app will query you if you are sure, because once you close the app, your to-do list is outputted and you can't work on it again unless you re-type those items onto the new instance of the app that is running.
 
   Thank you!
