@@ -6,11 +6,14 @@ require '/Users/Santiago/desktop/ca_workbook/shtda1/src/user'           # import
 require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration'  # importing constants EMAIL and NAME from configuration.rb
 require '/Users/Santiago/desktop/ca_workbook/shtda1/src/messages'       # importing methods from messages.rb
 
-require 'pp'
+require 'pp' # https://ruby-doc.org/stdlib-2.4.1/libdoc/pp/rdoc/PP.html
 
-puts welcome
-app_on = true
-today_todo_list = ToDoList.new
+# take command line arguments
+
+puts "Hi, #{NAME}!"
+puts welcome # welcome method from messages.rb
+app_on = true # local var that acts as conditional for while loop of app - while loop will end when app_on is set to false
+today_todo_list = ToDoList.new # new instance of ToDoList class set to local var today_todo_list
 
 while app_on
   puts main_menu
