@@ -5,21 +5,38 @@ require 'date' # https://ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/Date.html
 require 'sendgrid-ruby' # https://github.com/sendgrid/sendgrid-ruby
 require 'pp'
 
+require '/Users/Santiago/desktop/ca_workbook/shtda1/todo_item'
+
 # Initializing ToDoList class which holds the outline for the To-Do Lists in the app
 class ToDoList
   include SendGrid
   # when ToDoList is initialized, it takes a txt file that holds json hashes of ToDoItem(s)
   # through the todo_list parameter
-  def initialize(todo_list)
+  def initialize(todo_list = nil)
     @todo_list = todo_list # todo_list parameter assigned to instance variable @todo_list
-    @data = File.open(@todo_list).read # empty array assigned to instance variable @data. This will hold the hashes of ToDo items
+    if @todo_list.nil?
+      @data = [] # empty array assigned to instance variable @data. This will hold the hashes of ToDo items
+    else
+      @data = File.open(@todo_list).read
+    end
     @today = DateTime.now.strftime '%d-%m-%Y' # instance var @today holds the day's date in dd-mm-yyyy format
   end
 
   # method list returns an array through instance var @data with all ToDo items (hashes)
-  # parsed from JSON onto String
   def list
     @data
+  end
+
+  # method to add a todo_item instance object onto the @data instance variable
+  def add(todo_item)
+    @data << todo_item
+  end
+
+  # complete method returns a ToDoItem object with it's default value of complete changed from false to true
+  def complete(todo_item)
+    response = todo_item
+    # response[:complete] = true
+    response
   end
 
   # method send_email_digest sends an email to the email outlined in the local var 'to' and returns
@@ -39,7 +56,6 @@ class ToDoList
   end
 end
 
-test_email = ToDoList.new('/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/test_todo_list.txt')
-puts test_email.list.class
-p test_email.list
+# TESTTODOLIST = ToDoList.new('/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/test_todo_list.txt')
+TESTTODOLIST = ToDoList.new
 # test_email.send_email_digest

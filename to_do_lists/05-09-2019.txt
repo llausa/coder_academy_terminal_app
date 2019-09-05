@@ -1,3 +1,1 @@
-{"id":1,"name":"123","due_date":"123"}
-{"id":2,"name":"test 2","due_date":""}
-{"id":3,"name":"test3","due_date":"friday 23pm"}
+{:id=>1, :description=>"test1", :due_date=>"test2", :complete=>false}

@@ -4,7 +4,7 @@
 class ToDoItem
   # add method returns to-do items with parameters id, description, due_date and complete in the format necessary
   # id takes an Integer, description takes a String, due_date also takes a String and complete is automatically set to false
-  def add(id, description, due_date)
+  def create(id, description, due_date)
     { 'id': id, 'description': description, 'due_date': due_date, 'complete': false }
   end
 

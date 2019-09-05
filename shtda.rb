@@ -15,7 +15,7 @@ t = DateTime.now
 File.new("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt", 'a')
 def list
   data = File.open("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt").read
-  data.each_line.map { |line| JSON.parse(line) }
+  # data.each_line.map { |line| JSON.parse(line) }
 end
 
 @data = list
@@ -23,9 +23,9 @@ end
 def add_to_do(name, due_date)
   max_id = @data.max_by { |arr| arr['id'] }
   max_id = max_id ? max_id['id'] + 1 : 1
-  pp to_do_item = { 'id' => max_id, 'name' => name, 'due_date' => due_date }
+  pp to_do_item = { 'id': max_id, 'description': name, 'due_date': due_date, 'complete': false }
   @data.push(to_do_item)
-  save_item(to_do_item.to_json)
+  save_item(to_do_item)
   # pp @data
 end
 
