@@ -5,6 +5,7 @@ require './todo_list'
 require './user'
 require 'pp'
 require 'json'
+require './configuration'
 
 puts "Welcome to Santiago's To-Do App\n"
 
