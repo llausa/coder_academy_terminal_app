@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item'
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_list'
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/user'
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration'
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/messages'
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item'      # importing ToDoItem class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_list'      # importing ToDoList class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/user'           # importing User class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration'  # importing constants EMAIL and NAME from configuration.rb
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/messages'       # importing methods from messages.rb
 
 require 'pp'
-require 'json'
-require 'date' # https://ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/Date.html
 
 puts welcome
 app_on = true
@@ -35,15 +33,23 @@ while app_on
     puts 'at what id? '
     id_param_input = gets.chomp.to_i
 
-    # TESTTODOLIST.list.delete_if { |todo_item| todo_item[:id] == id_param_input }
+    today_todo_list.complete(id_param_input)
 
   elsif user_input == 'send email digest'
-    send_email
+    today_todo_list.send_email_digest
   elsif user_input == 'help'
     puts 'help'
   elsif user_input == 'exit'
-    puts 'bye'
-    app_on = false
+    puts 'Are you sure?(y or n)'
+    user_input = gets.chomp.to_s.downcase
+    if user_input == 'y'
+      puts 'goodbye!'
+      app_on = false
+    elsif user_input == 'n'
+      puts 'no wokkas'
+    else
+      puts 'Invalid Command'
+    end
   else
     puts 'Invalid Command'
   end

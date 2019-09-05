@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item'
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration'
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item' # importing ToDoItem class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration' # importing constants EMAIL and NAME from configuration.rb
 
-require 'json' # https://ruby-doc.org/stdlib-2.6.3/libdoc/json/rdoc/JSON.html
 require 'sendgrid-ruby' # https://github.com/sendgrid/sendgrid-ruby
 require 'pp'
 
@@ -12,13 +11,8 @@ class ToDoList
   include SendGrid
   # when ToDoList is initialized, it takes a txt file that holds json hashes of ToDoItem(s)
   # through the todo_list parameter
-  def initialize(todo_list = nil)
-    @todo_list = todo_list
-    if todo_list.nil?
-      @data = []
-    else
-      @data = File.readlines(@todo_list)
-    end
+  def initialize
+    @data = []
   end
 
   # method list returns an array through instance var @data with all ToDo items (hashes)
@@ -40,7 +34,7 @@ class ToDoList
   # method send_email_digest sends an email to the email outlined in the local var 'to' and returns
   # a status code that should be 202 (accepted response). Sendgrid will then process the request.
   def send_email_digest
-    from = Email.new(email: 'donotreply@shtda.com')
+    from = Email.new(email: "#{NAME}@shtda.com")
     to = Email.new(email: EMAIL)
     subject = 'Here is your to-do digest!'
     content = Content.new(type: 'text/plain', value: @data.join(', '))
@@ -59,27 +53,3 @@ class ToDoList
     end
   end
 end
-
-# # TESTTODOLIST = ToDoList.new('/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/test_todo_list.txt')
-# TESTTODOLIST = ToDoList.new
-# test_email.send_email_digest
-#
-# pp TESTTODOLIST.list
-#
-# TESTTODOLIST.send_email_digest
-#
-# TESTTODOLIST.add(TODOITEM.create(1, 'bruh', 'bruh'))
-# TESTTODOLIST.add(TODOITEM.create(2, 'bruh2', 'bruh2'))
-# TESTTODOLIST.add(TODOITEM.create(3, 'bruh3', 'bruh3'))
-#
-# pp TESTTODOLIST.list
-#
-# TESTTODOLIST.complete(2)
-#
-# pp TESTTODOLIST.list
-#
-# TESTTODOLIST.add(TODOITEM.create(4, 'bruh4', 'bruh4'))
-#
-# pp TESTTODOLIST.list
-#
-# TESTTODOLIST.send_email_digest
