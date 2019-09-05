@@ -7,16 +7,18 @@ def welcome
 end
 
 def main_menu
-"
-What would you like to do? Options:
-- to-do list,
-- add to-do,
-- complete to-do,
-- send email digest
-- help
-- exit"
+  "
+  What would you like to do? Options:
+  - to-do list,
+  - add to-do,
+  - complete to-do,
+  - send email digest
+  - help
+  - exit"
 end
 
-def help
+def help; end
 
+def chuck_norris_joke
+  'Chuck Norris counted to infinity... Twice.'
 end

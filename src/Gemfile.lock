@@ -1,8 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    json (2.2.0)
+    colorize (0.8.1)
+    json (1.8.6)
     ruby_http_client (3.3.0)
+    rubyjokes (1.0.1)
     sendgrid-ruby (6.0.0)
       ruby_http_client (~> 3.3.0)
 
@@ -10,7 +12,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  json (~> 2.2)
+  colorize (~> 0.8.1)
+  json
+  rubyjokes (~> 1.0)
   sendgrid-ruby (~> 6.0)
 
 BUNDLED WITH

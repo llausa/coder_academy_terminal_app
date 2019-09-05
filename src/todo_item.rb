@@ -10,7 +10,6 @@ class ToDoItem
 
   # complete method returns a ToDoItem object with it's default value of complete changed from false to true
   def complete(to_do_item)
-    # response = JSON.parse(to_do_item)
     response = to_do_item
     response[:complete] = true
     response

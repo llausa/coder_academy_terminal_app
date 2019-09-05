@@ -7,6 +7,7 @@ require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration'  # import
 require '/Users/Santiago/desktop/ca_workbook/shtda1/src/messages'       # importing methods from messages.rb
 
 require 'pp' # https://ruby-doc.org/stdlib-2.4.1/libdoc/pp/rdoc/PP.html
+require 'colorize' # https://github.com/fazibear/colorize
 
 puts "Hi, #{USER.name}!" # calling on USER instance of User.class set in user.rb - accessing name through attr_accessor
 puts welcome # welcome method from messages.rb
@@ -49,6 +50,8 @@ while app_on
     today_todo_list.send_email_digest # run method 'send_email_digest' of ToDoList class - this send a request to Sendgrid
   elsif user_input == 'help' # run code below if user submits 'help'
     puts 'help' # puts help method from messages.rb
+  elsif user_input == 'chuck norris' # easter egg :D
+    puts chuck_norris_joke
   elsif user_input == 'exit' # if user submits 'exit' begin shut down sequence
     # shuting down sequence asks the user if they are sure because they lose their data if they quit without sending
     # and email digest.

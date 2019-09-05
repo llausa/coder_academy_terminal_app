@@ -6,6 +6,10 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem "json", "~> 2.2"
+gem "json"
 
 gem "sendgrid-ruby", "~> 6.0"
+
+gem "colorize", "~> 0.8.1"
+
+gem "rubyjokes", "~> 1.0"
