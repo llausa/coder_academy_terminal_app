@@ -17,6 +17,6 @@ What would you like to do? Options:
 - exit"
 end
 
-def today_todo_list_created(today)
-  "Your #{today}.txt file has been created. Please run shtda.rb again."
+def help
+
 end
