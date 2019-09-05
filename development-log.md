@@ -11,3 +11,12 @@
   So my sengrid account was suspended because I uploaded my sendgrid api key to my public repo on github. I've learned my lesson.
 
   Up next, I will rebuild my code with TDD methodology to create a modularised and DRY code base.
+
+# 05/09/19
+  The executive decision of removing JSON from the project has been made. Originally, the idea was that having the to-do lists saved in JSON format would set the foundation for future development opportunities that would require the JSON format (eg sending to-do lists as sms texts to people).
+
+  However, the conversion from and to JSON are too time intensive and don't necessarily fall within the scope of the MVP.
+
+  Hence it will be added as a Nice-to-Have in the trello board where we are keeping track of the project. This will simplify the code writing process and simplify the logic of the MVP.
+
+  Down the track, if JSON portability is desired, it can be added onto the project.

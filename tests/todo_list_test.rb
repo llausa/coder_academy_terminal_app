@@ -14,4 +14,11 @@ class ToDoListTest < Test::Unit::TestCase
     @todo_list_output = @todo_list.list
     assert_equal(File.open('/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/test_todo_list.txt').read, @todo_list_output)
   end
+=begin
+  def test_todo_list_email_response
+    @todo_list.list
+    @todo_list_email_response = @todo_list.send_email_digest
+    assert_equal('202', @todo_list_email_response)
+  end
+=end
 end
