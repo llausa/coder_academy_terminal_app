@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item'
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration'
+
 require 'json' # https://ruby-doc.org/stdlib-2.6.3/libdoc/json/rdoc/JSON.html
-require 'date' # https://ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/Date.html
 require 'sendgrid-ruby' # https://github.com/sendgrid/sendgrid-ruby
 require 'pp'
-
-require '/Users/Santiago/desktop/ca_workbook/shtda1/todo_item'
-require './configuration'
 
 # Initializing ToDoList class which holds the outline for the To-Do Lists in the app
 class ToDoList
@@ -14,13 +13,12 @@ class ToDoList
   # when ToDoList is initialized, it takes a txt file that holds json hashes of ToDoItem(s)
   # through the todo_list parameter
   def initialize(todo_list = nil)
-    @todo_list = todo_list # todo_list parameter assigned to instance variable @todo_list
-    if @todo_list.nil?
-      @data = [] # empty array assigned to instance variable @data. This will hold the hashes of ToDo items
+    @todo_list = todo_list
+    if todo_list.nil?
+      @data = []
     else
-      @data = File.open(@todo_list).read
+      @data = File.readlines(@todo_list)
     end
-    @today = DateTime.now.strftime '%d-%m-%Y' # instance var @today holds the day's date in dd-mm-yyyy format
   end
 
   # method list returns an array through instance var @data with all ToDo items (hashes)
@@ -62,26 +60,26 @@ class ToDoList
   end
 end
 
-# TESTTODOLIST = ToDoList.new('/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/test_todo_list.txt')
-TESTTODOLIST = ToDoList.new
+# # TESTTODOLIST = ToDoList.new('/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/test_todo_list.txt')
+# TESTTODOLIST = ToDoList.new
 # test_email.send_email_digest
-
-pp TESTTODOLIST.list
-
-TESTTODOLIST.send_email_digest
-
-TESTTODOLIST.add(TODOITEM.create(1, 'bruh', 'bruh'))
-TESTTODOLIST.add(TODOITEM.create(2, 'bruh2', 'bruh2'))
-TESTTODOLIST.add(TODOITEM.create(3, 'bruh3', 'bruh3'))
-
-pp TESTTODOLIST.list
-
-TESTTODOLIST.complete(2)
-
-pp TESTTODOLIST.list
-
-TESTTODOLIST.add(TODOITEM.create(4, 'bruh4', 'bruh4'))
-
-pp TESTTODOLIST.list
-
-TESTTODOLIST.send_email_digest
+#
+# pp TESTTODOLIST.list
+#
+# TESTTODOLIST.send_email_digest
+#
+# TESTTODOLIST.add(TODOITEM.create(1, 'bruh', 'bruh'))
+# TESTTODOLIST.add(TODOITEM.create(2, 'bruh2', 'bruh2'))
+# TESTTODOLIST.add(TODOITEM.create(3, 'bruh3', 'bruh3'))
+#
+# pp TESTTODOLIST.list
+#
+# TESTTODOLIST.complete(2)
+#
+# pp TESTTODOLIST.list
+#
+# TESTTODOLIST.add(TODOITEM.create(4, 'bruh4', 'bruh4'))
+#
+# pp TESTTODOLIST.list
+#
+# TESTTODOLIST.send_email_digest

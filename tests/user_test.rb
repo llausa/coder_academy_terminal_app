@@ -16,8 +16,8 @@ class UserTest < Test::Unit::TestCase
     assert_equal(EMAIL, user_email_output)
   end
 
-  def test_token_present
-    user_token_output = @user.token
-    assert_equal(TOKEN, user_token_output)
+  def test_name_present
+    user_name_output = @user.name
+    assert_equal(NAME, user_name_output)
   end
 end

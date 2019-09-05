@@ -15,11 +15,4 @@ class ToDoItemTest < Test::Unit::TestCase
     todo_item_create_output = @todo_item.create(1, 'Pass the test', 'today')
     assert_equal({:complete=>false, :description=>"Pass the test", :due_date=>"today", :id=>1}, todo_item_create_output)
   end
-
-  # testing output of complete method of ToDoItem class
-  def test_complete_todo_item
-    todo_item_test = @todo_item.create(1, 'Pass the test', 'today')
-    todo_item_complete_output = @todo_item.complete(todo_item_test)
-    assert_equal({:complete=>true, :description=>"Pass the test", :due_date=>"today", :id=>1}, todo_item_complete_output)
-  end
 end

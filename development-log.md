@@ -20,3 +20,30 @@
   Hence it will be added as a Nice-to-Have in the trello board where we are keeping track of the project. This will simplify the code writing process and simplify the logic of the MVP.
 
   Down the track, if JSON portability is desired, it can be added onto the project.
+
+# 05/09/19
+  The UI/UX of the app is basically divided into 2 parts. Part 1 is booting up the app without any command line arguments. The functionality for this part of the app has been built. It is complete and ready and it works!
+
+  When an email is sent from the app, it arrives in the inbox of the email address provided in the configuration.rb file.
+
+  The challenge now is to accept command line arguments, to be able to successfully take the data from the text files, manipulate it effectively and then save it back to the text file.
+
+  The email functionality will inherently work if the app is able to read the file and suck up the date in the correct format (an array of hashes).
+
+# 05/09/19
+  The scope of the project is officually being scaled back even further. Now, instead of being able to take existing to-do list files (in txt format), the app will automatically create a to-do list for the day.
+
+  The user will then be able to add and complete to-do items on this one to-do list throughout the day. Users will also be able to send the email digest of this to-do list whenever they want during the day.
+
+  The previous scope will be filed away as a Nice-to-Have. The main reasoning behind this is as follows: working on letting the app accept any sort of txt file, and creating the checks and making the logic of the app work with these files would be too time consuming. It would not be ready in time to present and hand in the assignment.
+
+  Command line arguments will still be accepted, for the users' name and email but they will be optional.
+
+  This change will allow me to have more time to thoroughly test and improve the UI/UX of the app.
+
+# 05/09/19
+  With less than 30 hours to go until we have to hand in the assignment, I have made the choice to drop the use of txt files. The main reason behind this is that getting existing files with data to be read in a format accepted by the app is turning out to be difficult.
+
+  All app functionality works without this dynamic and going down this route will help me complete the assignment and let me test it so that I can guarantee that it works in other machines. And more importantly that it works as intended.
+
+  The documentation will need to be updated to reflect this change.
