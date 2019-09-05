@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
-if ARGV.length == 2
-  @email = ARGV[0]
-  @name = ARGV[1]
-else
-  puts "Please pass 2 args. The first one should be the complete email and the second one a name."
-end
+@email = ARGV[0], @name = ARGV[1] if ARGV.length == 2
 
-EMAIL = @email || 'santiago@gmail.com'
+EMAIL = @email || 'santiago.chamon@gmail.com'
 NAME = @name || 'Santiago'

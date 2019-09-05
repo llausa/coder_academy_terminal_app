@@ -34,8 +34,8 @@ class ToDoList
   # method send_email_digest sends an email to the email outlined in the local var 'to' and returns
   # a status code that should be 202 (accepted response). Sendgrid will then process the request.
   def send_email_digest
-    from = Email.new(email: "#{NAME}@shtda.com")
-    to = Email.new(email: EMAIL)
+    from = Email.new(email: "donotreply@shtda.com")
+    to = Email.new(email: USER.email)
     subject = 'Here is your to-do digest!'
     content = Content.new(type: 'text/plain', value: @data.join(', '))
     mail =  Mail.new(from, subject, to, content)

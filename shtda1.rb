@@ -10,7 +10,7 @@ require 'pp' # https://ruby-doc.org/stdlib-2.4.1/libdoc/pp/rdoc/PP.html
 
 # take command line arguments
 
-puts "Hi, #{NAME}!"
+puts "Hi, #{USER.name}!"
 puts welcome # welcome method from messages.rb
 app_on = true # local var that acts as conditional for while loop of app - while loop will end when app_on is set to false
 today_todo_list = ToDoList.new # new instance of ToDoList class set to local var today_todo_list

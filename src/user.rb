@@ -13,3 +13,5 @@ class User
     @name = NAME
   end
 end
+
+USER = User.new
