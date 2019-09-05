@@ -42,7 +42,7 @@
   choose Ruby from all the different options
   and ONLY follow the first 3 steps
 
-  [!sendgrid steps](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_setup.png)
+[!sendgrid setup](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_setup.png)
 
   including the ENV variable - just copy paste the env variable commands shown there
   the commands will change depending on your API key
