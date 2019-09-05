@@ -1,99 +1,58 @@
 # frozen_string_literal: true
 
-require 'date'
-require 'json'
-require 'sendgrid-ruby'
-require 'pp'
-include SendGrid
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item'      # importing ToDoItem class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_list'      # importing ToDoList class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/user'           # importing User class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration'  # importing constants EMAIL and NAME from configuration.rb
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/messages'       # importing methods from messages.rb
 
-puts "Welcome to Santiago's To-Do App\n"
+require 'pp' # https://ruby-doc.org/stdlib-2.4.1/libdoc/pp/rdoc/PP.html
 
-app_on = true
-t = DateTime.now
-@today = t.strftime '%d-%m-%Y'
+puts "Hi, #{USER.name}!" # calling on USER instance of User.class set in user.rb - accessing name through attr_accessor
+puts welcome # welcome method from messages.rb
+app_on = true # local var that acts as conditional for while loop of app - while loop will end when app_on is set to false
+today_todo_list = ToDoList.new # new instance of ToDoList class set to local var today_todo_list
 
-File.new("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt", 'a')
-def list
-  data = File.open("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt").read
-  # data.each_line.map { |line| JSON.parse(line) }
-end
+# this while loop runs as long as app_on equals true - it also runs the entire app
+while app_on
+  puts main_menu # puts the main_menu method from messages.rb
+  user_input = gets.chomp.to_s.downcase # user input query
 
-@data = list
+  if user_input == 'to-do list' #
+    pp today_todo_list.list
+  elsif user_input == 'add to-do'
+    puts 'description: '
+    name_param_input = gets.chomp.to_s.downcase
+    puts 'due date (optional): '
+    due_date_param_input = gets.chomp.to_s.downcase
 
-def add_to_do(name, due_date)
-  max_id = @data.max_by { |arr| arr['id'] }
-  max_id = max_id ? max_id['id'] + 1 : 1
-  pp to_do_item = { 'id': max_id, 'description': name, 'due_date': due_date, 'complete': false }
-  @data.push(to_do_item)
-  save_item(to_do_item)
-  # pp @data
-end
+    max_id = today_todo_list.list.max_by { |todo_item| todo_item[:id] }
+    max_id = max_id ? max_id[:id] + 1 : 1
 
-def complete_to_do(index)
-  # @data.delete!(@data['index']=  index)
-  @data.each_with_index { |to_do_item, _i| puts to_do_item.to_s if to_do_item['index'] == index } # @data.slice!(i) if to_do_item['index'] == index  }
-  # File.write("#{@today}.txt", @data.map(&:to_json).join("\n"), mode: 'w+')
-  # pp @data.class
-end
+    pp today_todo_list.add(TODOITEM.create(max_id, name_param_input, due_date_param_input))
 
-def send_email
-  from = Email.new(email: 'donotreply@shtda.com')
-  to = Email.new(email: 'santiago.chamon@gmail.com')
-  subject = "Here is your #{@today} to-do digest!"
-  content = Content.new(type: 'text/plain', value: @data.join(",\n"))
-  mail =  Mail.new(from, subject, to, content)
+  elsif user_input == 'complete to-do'
+    puts 'at what id? '
+    id_param_input = gets.chomp.to_i
 
-  sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-  response = sg.client.mail._('send').post(request_body: mail.to_json)
-  puts response.status_code
-  puts response.body
-  puts response.headers
-end
+    today_todo_list.complete(id_param_input)
 
-def save_item(item)
-  File.write("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt", "\n#{item}", mode: 'a')
-end
-
-if File.exist?("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt")
-  # code that runs when today.txt exists
-
-  while app_on
-    puts "
-What would you like to do? Options:
-- to-do list,
-- add to-do,
-- complete to-do,
-- send email digest
-- help
-- exit"
+  elsif user_input == 'send email digest'
+    today_todo_list.send_email_digest
+  elsif user_input == 'help'
+    puts 'help'
+  elsif user_input == 'exit'
+    puts 'Are you sure?(y or n)'
     user_input = gets.chomp.to_s.downcase
-
-    if user_input == 'to-do list'
-      pp @data # maybe loop through list?
-    elsif user_input == 'add to-do'
-      puts 'name: '
-      name_param_input = gets.chomp.to_s.downcase
-      puts 'due date (optional): '
-      due_date_param_input = gets.chomp.to_s.downcase
-
-      add_to_do(name_param_input, due_date_param_input)
-
-    elsif user_input == 'complete to-do'
-      puts 'at what index? '
-      index_param_input = gets.chomp
-
-      complete_to_do(index_param_input)
-    elsif user_input == 'send email digest'
-      send_email
-    elsif user_input == 'help'
-      puts 'help'
-    elsif user_input == 'exit'
-      puts 'bye'
+    if user_input == 'y'
+      puts 'goodbye!'
       app_on = false
+    elsif user_input == 'n'
+      puts 'no wokkas'
     else
       puts 'Invalid Command'
     end
+  else
+    puts 'Invalid Command'
   end
-else
-  File.new("/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/#{@today}.txt", 'w+')
 end
