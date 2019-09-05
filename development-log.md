@@ -47,3 +47,10 @@
   All app functionality works without this dynamic and going down this route will help me complete the assignment and let me test it so that I can guarantee that it works in other machines. And more importantly that it works as intended.
 
   The documentation will need to be updated to reflect this change.
+
+# 05/09/19
+  The project is done! It runs in my local machine and send to-do lists to the outlined email in the app. The project is within the scope outlined in the User stories and there's even a Nice-to-Have that has been built.
+
+  There is a lot of room for improvement and expansion of the app but this foundation is operational and is thoroughly documented so that whoever wants to expand on it can jus clone the repo and get started.
+
+  Testing to see if the repo runs in other machines is up next. For help on how to setup the repo in your local machine checkout the help.rb file.
