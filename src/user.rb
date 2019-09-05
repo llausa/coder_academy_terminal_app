@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration' # loading confirguation.rb file for EMAIL and TOKEN constants
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration' # loading confirguation.rb file for EMAIL and NAME constants
 
 # Initializing User class which holds the outline for the User in the app
 class User
@@ -14,4 +14,5 @@ class User
   end
 end
 
+# an isntance of User class is spun up and saved to the USER constant for use in shtda.rb and todo_list.rb
 USER = User.new

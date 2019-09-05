@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-@email = ARGV[0], @name = ARGV[1] if ARGV.length == 2
+@email = ARGV[0], @name = ARGV[1] if ARGV.length == 2 # command line arguments received here
 
-EMAIL = @email || 'santiago.chamon@gmail.com'
-NAME = @name || 'Santiago'
+EMAIL = @email || 'santiago.chamon@gmail.com' # REQUIRED: change the value in the string in case your command line args don't work
+NAME = @name || 'Santiago' # REQUIRED: change the value in the string in case your command line args don't work

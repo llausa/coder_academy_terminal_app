@@ -2,7 +2,7 @@
 
 # Initializing ToDoItem class which holds the outline for each To-Do Item in the app
 class ToDoItem
-  # add method returns to-do items with parameters id, description, due_date and complete in the format necessary
+  # create method returns a hash of a to-do item with the following keys id, description, due_date and complete and their user-submitted values
   # id takes an Integer, description takes a String, due_date also takes a String and complete is automatically set to false
   def create(id, description, due_date)
     { 'id': id, 'description': description, 'due_date': due_date, 'complete': false }
@@ -16,4 +16,5 @@ class ToDoItem
   end
 end
 
+# ToDoItem class instance spun up and set to TODOITEM constant - will be used in shtda.rb file
 TODOITEM = ToDoItem.new

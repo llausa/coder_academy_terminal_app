@@ -4,35 +4,39 @@ require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item' # importing T
 require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration' # importing constants EMAIL and NAME from configuration.rb
 
 require 'sendgrid-ruby' # https://github.com/sendgrid/sendgrid-ruby
-require 'pp'
+require 'pp' # https://ruby-doc.org/stdlib-2.4.1/libdoc/pp/rdoc/PP.html
 
-# Initializing ToDoList class which holds the outline for the To-Do Lists in the app
+# Initializing ToDoList class which holds the outline for the To-Do List in the app
 class ToDoList
   include SendGrid
-  # when ToDoList is initialized, it takes a txt file that holds json hashes of ToDoItem(s)
-  # through the todo_list parameter
+  # when ToDoList is initialized, it sets an empty array to instance var @data
   def initialize
     @data = []
   end
 
-  # method list returns an array through instance var @data with all ToDo items (hashes)
+  # method list returns an array through instance var @data with all ToDo items (hashes) inside @data
   def list
     @data
   end
 
   # method to add a todo_item instance object onto the @data instance variable
+  # returns update @data array
   def add(todo_item)
     @data << todo_item
   end
 
-  # complete method returns a ToDoItem object with it's default value of complete changed from false to true
+  # complete method completely removes a todo_item from the @data array if the user wants to mark it as "complete"
   def complete(id)
+    # the delete_if method loops through each hash in the the @data array and deletes a hash if
+    # it's :id key is equal to the param id that is passed to the method - this method is called in the
+    # shtda.rb file
     @data.delete_if { |todo_item| todo_item[:id] == id }
-    @data
+    @data #return updated @data array
   end
 
-  # method send_email_digest sends an email to the email outlined in the local var 'to' and returns
+  # method send_email_digest sends an email to the email address outlined in the class object instance var inside 'to' and returns
   # a status code that should be 202 (accepted response). Sendgrid will then process the request.
+  # error handling also happens inside the method
   def send_email_digest
     from = Email.new(email: "donotreply@shtda.com")
     to = Email.new(email: USER.email)

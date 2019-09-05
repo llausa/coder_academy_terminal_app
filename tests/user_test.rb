@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'test/unit' # https://www.rubydoc.info/gems/test-unit/2.3.1/Test/Unit
-require '/Users/Santiago/desktop/ca_workbook/shtda1/user' # importing User class
-require '/Users/Santiago/desktop/ca_workbook/shtda1/configuration' # loading confirguation.rb file for EMAIL and TOKEN constants
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/user' # importing User class
+require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration' # loading confirguation.rb file for EMAIL and TOKEN constants
 
 # Setup tests for the User class
 class UserTest < Test::Unit::TestCase
@@ -11,11 +11,13 @@ class UserTest < Test::Unit::TestCase
     @user = User.new
   end
 
+  # Test to check that an email is present in EMAIL
   def test_email_present
     user_email_output = @user.email
     assert_equal(EMAIL, user_email_output)
   end
 
+  # Test to check that a name is present in NAME
   def test_name_present
     user_name_output = @user.name
     assert_equal(NAME, user_name_output)

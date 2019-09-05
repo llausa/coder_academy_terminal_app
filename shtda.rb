@@ -49,24 +49,24 @@ while app_on
   elsif user_input == 'send email digest' # if user submits 'send email digest' run the code below
     today_todo_list.send_email_digest # run method 'send_email_digest' of ToDoList class - this send a request to Sendgrid
   elsif user_input == 'help' # run code below if user submits 'help'
-    puts 'help' # puts help method from messages.rb
+    puts help # puts help method from messages.rb
   elsif user_input == 'chuck norris' # easter egg :D
     puts chuck_norris_joke
   elsif user_input == 'exit' # if user submits 'exit' begin shut down sequence
     # shuting down sequence asks the user if they are sure because they lose their data if they quit without sending
     # and email digest.
-    puts 'Are you sure?(y or n)'
+    puts are_you_sure
     user_input = gets.chomp.to_s.downcase
     if user_input == 'y'
-      puts 'goodbye!'
+      puts goodbye
       pp today_todo_list.list # the final list of the To-Do list is pretty printed just before the app closes
       app_on = false
     elsif user_input == 'n'
-      puts 'no wokkas'
+      puts no_problem
     else
-      puts 'Invalid Command' # invalid command returned if user types anything other than y or n
+      puts invalid_command # invalid command returned if user types anything other than y or n
     end
   else
-    puts 'Invalid Command' # invalid command if user submits anything other than available commands
+    puts invalid_command # invalid command if user submits anything other than available commands
   end
 end
