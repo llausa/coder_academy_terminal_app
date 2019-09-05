@@ -10,7 +10,7 @@
   *GAH*!!! Open a new browser, login, and now check to see what needs to be done...
   That's really painful...
 
-  Keeping track of what needs to be done is hard for anyone who has a normal job. Keeping track of to-do items is usually done in a calendar or on paper.
+  Keeping track of what needs to be done is hard for anyone who has a normal job. Keeping track of to-do items is usually done in a calendar notebook or on paper.
 
   Losing your to-do piece of paper or forgetting your calendar notebook can ruin a day or set you back a lot.
 
@@ -25,7 +25,7 @@
 
   This terminal app helps you deliver the stuff you promised you would deliver.
 
-  This was by far one of the most effective time management strategies I utilised as a Project Manager. But I hated life when my calendar notebook was left at home. And using A4 paper to keep track of which clients I had to call back/emails I needed to send while working at a Tech Startup seemed backward.
+  This was by far one of the most effective time management strategies I utilised as a Project Manager. But I hated life when my calendar notebook was left at home. And using A4 paper to keep track of clients I had to call back/emails I needed to send while working at a Tech Startup seemed backward.
 
   The main idea behind this app is to digitise everything around the trusty to-do list you may see being used around the world.
 
@@ -35,7 +35,7 @@
   And for the sake of posterity, Users can ask the app to send them an email digest of outstanding items straight to their email inbox. Yaaaaaaasss!
 
 ## Status Build
-  This application is currently under construction. Please check back soon!
+  Complete. This application's MVP is built and functional. Head over to 'help.md' for instructions on how to download the project and use it.
 
 ## UI/UX
   Santiago's Humble To-Do App is a text-based productivity terminal application.
