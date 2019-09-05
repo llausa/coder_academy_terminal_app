@@ -42,14 +42,13 @@
   choose Ruby from all the different options
   and ONLY follow the first 3 steps
 
-       [!sendgrid steps](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_setup.png)
+  [!sendgrid steps](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_setup.png)
 
   including the ENV variable - just copy paste the env variable commands shown there
   the commands will change depending on your API key
   DONT DO ANYTHING AFTER STEP 3!! IT'S ALREADY SET UP!!
 
-  5. then head back to your project folder,
-  go into the src directory and open up the follwing file:
+  5. Then head back to your project folder, go into the src directory and open up the follwing file:
 
        configuration.rb
 
@@ -62,6 +61,4 @@
 
         ruby shtda.rb
 
-  Just follow the prompts
-
-  7. Enjoy!
+  7. Just follow the prompts and Enjoy!
