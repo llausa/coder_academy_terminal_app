@@ -37,7 +37,7 @@ What would you like to do? Options:
     puts 'at what id? '
     id_param_input = gets.chomp.to_i
 
-    TESTTODOLIST.list.delete_if { |todo_item| todo_item[:id] == id_param_input }
+    # TESTTODOLIST.list.delete_if { |todo_item| todo_item[:id] == id_param_input }
 
   elsif user_input == 'send email digest'
     send_email

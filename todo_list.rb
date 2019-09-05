@@ -33,10 +33,9 @@ class ToDoList
   end
 
   # complete method returns a ToDoItem object with it's default value of complete changed from false to true
-  def complete(todo_item)
-    response = todo_item
-    # response[:complete] = true
-    response
+  def complete(id)
+    @data.delete_if { |todo_item| todo_item[:id] == id }
+    @data
   end
 
   # method send_email_digest sends an email to the email outlined in the local var 'to' and returns
@@ -44,8 +43,8 @@ class ToDoList
   def send_email_digest
     from = Email.new(email: 'donotreply@shtda.com')
     to = Email.new(email: 'santiago.chamon@gmail.com')
-    subject = "Here is your #{@today} to-do digest!"
-    content = Content.new(type: 'text/plain', value: @data)
+    subject = 'Here is your to-do digest!'
+    content = Content.new(type: 'text/plain', value: @data.join(', '))
     mail =  Mail.new(from, subject, to, content)
 
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
@@ -59,3 +58,23 @@ end
 # TESTTODOLIST = ToDoList.new('/Users/Santiago/desktop/ca_workbook/shtda1/to_do_lists/test_todo_list.txt')
 TESTTODOLIST = ToDoList.new
 # test_email.send_email_digest
+
+pp TESTTODOLIST.list
+
+TESTTODOLIST.send_email_digest
+
+TESTTODOLIST.add(TODOITEM.create(1, 'bruh', 'bruh'))
+TESTTODOLIST.add(TODOITEM.create(2, 'bruh2', 'bruh2'))
+TESTTODOLIST.add(TODOITEM.create(3, 'bruh3', 'bruh3'))
+
+pp TESTTODOLIST.list
+
+TESTTODOLIST.complete(2)
+
+pp TESTTODOLIST.list
+
+TESTTODOLIST.add(TODOITEM.create(4, 'bruh4', 'bruh4'))
+
+pp TESTTODOLIST.list
+
+TESTTODOLIST.send_email_digest
