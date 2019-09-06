@@ -136,11 +136,11 @@
   Progress can be tracked on the Trello Board as well as the 'development-log.md' file
 
   Here are some screenshots of the Trello board over the last week:
-  - 02/09/19
-  - 03/09/19
-  - 04/09/19
-  - 05/09/19
-  - 06/09/19
+  - [02/09/19](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/trello_2_9.png)
+  - [03/09/19](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/trello_3_9.png)
+  - [04/09/19](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/trello_4_9.png)
+  - [05/09/19](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/trello_5_9.png)
+  - [06/09/19](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/trello_6_9.png)
 
 ## Tools Used
   * VSCode
