@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration' # loading confirguation.rb file for EMAIL and NAME constants
+require-relative 'configuration' # loading confirguation.rb file for EMAIL and NAME constants
 
 # Initializing User class which holds the outline for the User in the app
 class User

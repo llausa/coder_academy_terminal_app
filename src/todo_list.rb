@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/todo_item' # importing ToDoItem class
-require '/Users/Santiago/desktop/ca_workbook/shtda1/src/configuration' # importing constants EMAIL and NAME from configuration.rb
+require-relative 'todo_item' # importing ToDoItem class
+require-relative 'configuration' # importing constants EMAIL and NAME from configuration.rb
 
 require 'sendgrid-ruby' # https://github.com/sendgrid/sendgrid-ruby
 require 'pp' # https://ruby-doc.org/stdlib-2.4.1/libdoc/pp/rdoc/PP.html
