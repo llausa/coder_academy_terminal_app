@@ -35,7 +35,7 @@
   And for the sake of posterity, Users can ask the app to send them an email digest of outstanding items straight to their email inbox. Yaaaaaaasss!
 
 ## Status Build
-  Complete. This application's MVP is built and functional. Head over to 'help.md' for instructions on how to download the project and use it.
+  Complete. This application's MVP is built and functional. Head over to [help.md](https://github.com/llausa/coder_academy_terminal_app/blob/master/help.md) for instructions on how to download the project and use it.
 
 ## UI/UX
   Santiago's Humble To-Do App is a text-based productivity terminal application.
