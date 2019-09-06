@@ -55,7 +55,7 @@
 
        configuration.rb
 
-  change the strings outlined to a default name and email
+  change the strings outlined to a default name and email (aka your name and email)
   you can also use the terminal AFTER to pass email and name to the file
   with command line arguments
 
