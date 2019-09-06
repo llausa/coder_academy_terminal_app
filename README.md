@@ -1,4 +1,4 @@
-## coder-academy-terminal-app
+## coder-academy-terminal-app software development plan
 
 # Santiago's Humble To-Do App (In the Terminal)
 
