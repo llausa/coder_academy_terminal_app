@@ -54,3 +54,12 @@
   There is a lot of room for improvement and expansion of the app but this foundation is operational and is thoroughly documented so that whoever wants to expand on it can jus clone the repo and get started.
 
   Testing to see if the repo runs in other machines is up next. For help on how to setup the repo in your local machine checkout the help.rb file.
+
+# 06/09/19
+  The app is complete and so is the documentation. The last thing to test before submitting the assignment is running the code in a different machine to see if it will run.
+
+  Determining that the help.md file is accurate will let the markers of the assignment run the project in their own machines.
+
+  This project was very interesting. I've had to cut back on quite a bit of functionality that at the end was not even inside the scope.
+
+  The project delivers the scope outlined in README.md.
