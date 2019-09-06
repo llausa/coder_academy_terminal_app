@@ -17,7 +17,7 @@
 
         gem install bundler
 
-  and then run again
+  and then run the below again
 
         bundle install
 
