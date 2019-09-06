@@ -13,23 +13,26 @@
 
         bundle install
 
-  if you don't have it already type the following into your Terminal
+  if you don't have bundle already type the following into your Terminal
 
         gem install bundler
 
-  and then run
+  and then run again
 
         bundle install
 
-  again
 
   4. move back to the root directory of the project by typing
 
         cd ..
 
-  once here, head over to Sendgrind and make an account, then head over to
+  once here, head over to Sendgrind (below) and make an account
 
-       https://app.sendgrid.com/guide
+       https://sendgrid.com/
+
+  and then head over to the following area
+
+      https://app.sendgrid.com/guide
 
   and select the
 
@@ -44,8 +47,8 @@
 
 ![sendgrid setup](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_setup.png)
 
-  including the ENV variable - just copy paste the env variable commands shown there
-  the commands will change depending on your API key
+  just copy paste the env variable commands shown there with your newly created API key. The commands will change depending on your API key!
+
   DONT DO ANYTHING AFTER STEP 3!! IT'S ALREADY SET UP!!
 
   5. Then head back to your project folder, go into the src directory and open up the follwing file:
