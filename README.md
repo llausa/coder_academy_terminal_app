@@ -141,7 +141,7 @@
   * Trello
   * Github
 
-## Bug
+## Bugs
   - There is a known bug with Sendgrid, where even if the API key is in sendgrid.env you get a 'no implicit conversion of nil into String' error.
 
   If you run 'send email digest' and you get an error like the one outlined in this [StackOverflow Question](https://stackoverflow.com/questions/49876315/sendgrid-implementation-no-implicit-conversion-of-nil-into-string), just do the following:
