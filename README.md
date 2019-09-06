@@ -145,13 +145,13 @@
 
   If you run 'send email digest' and you get an error like the one outlined in this [StackOverflow Question](https://stackoverflow.com/questions/49876315/sendgrid-implementation-no-implicit-conversion-of-nil-into-string), just do the following:
 
-    1. Head over to sendgrid
+  1. Head over to sendgrid
 
-    2. go to this address (https://app.sendgrid.com/guide)
+  2. go to this address (https://app.sendgrid.com/guide)
 
-    3. do the first 3 steps only, especially this:
+  3. do the first 3 steps only, especially this:
 
-    ![sendgrid setup2](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_setup.png)
+  ![sendgrid setup2](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/sendgrid_setup.png)
 
   You will add a new API key and link said API key to your app correctly.
   The code should run normally after this.
