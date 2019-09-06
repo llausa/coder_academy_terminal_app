@@ -40,18 +40,20 @@
 ## UI/UX
   Santiago's Humble To-Do App is a text-based productivity terminal application.
 
-  The User can boot up the app without any command line arguments. A to-do list will be automatically generated for that day.
+  The User can boot up the app without any command line arguments.
 
   ![no command line args](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/no_command_line_args.png)
 
 
-  Once the app has "booted up", the User will be shown a menu with all available options they can input (see Features/Scope).
+  Once the app has "booted up", the User will be shown a menu with all available commands they can input (see Features).
 
-  The User will also be presented with all command options that are available in the app every time the app prompts them for an input. There's even a help section explaining all commands and what they do.
+  The User will also be presented with all command options that are available in the app every time the app prompts them for an input. There's even a help section explaining all commands.
 
   ![app_menu](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/app_menu.png)
 
   The User only needs to type the command they want to run when prompted.
+
+  The User will be able to list to-do items from their To-Do List by using the 'to-do list' command. The command will pretty print the array of To-Do items right on the terminal.
 
   The User will be able to add to-do items to their To-Do List by using the 'add to-do' command. The command will then prompt the User for the description of the to-do and a due date (optional). This information will be stored locally.
 
@@ -64,7 +66,6 @@
   There also are error messages around the email functionality. If the User tries to send an empty To-Do list, an error message will prompt the User to add To-Do Items to their list.
 
 ## Features:
-  Here is the scope of what Users can do:
   * Add To-Do Items
 
     When selecting the command 'add to-to', Users will be able to add to-do items onto the to-do list that they are working on.
