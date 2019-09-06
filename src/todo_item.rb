@@ -9,6 +9,7 @@ class ToDoItem
   end
 
   # complete method returns a ToDoItem object with it's default value of complete changed from false to true
+  # superfluous but available if needed
   def complete(to_do_item)
     response = to_do_item
     response[:complete] = true
