@@ -135,6 +135,13 @@
 
   Progress can be tracked on the Trello Board as well as the 'development-log.md' file
 
+  Here are some screenshots of the Trello board over the last week:
+  - 02/09/19
+  - 03/09/19
+  - 04/09/19
+  - 05/09/19
+  - 06/09/19
+
 ## Tools Used
   * VSCode
   * iTerm2
