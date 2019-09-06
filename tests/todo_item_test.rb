@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'test/unit' # https://www.rubydoc.info/gems/test-unit/2.3.1/Test/Unit
-require-relative 'src/todo_item' # importing ToDoItem class
+require_relative 'src/todo_item' # importing ToDoItem class
 
 # Set up the tests for the ToDoItem class
 class ToDoItemTest < Test::Unit::TestCase

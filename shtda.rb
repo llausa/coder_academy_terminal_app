@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require-relative 'src/todo_item'      # importing ToDoItem class
-require-relative 'src/todo_list'      # importing ToDoList class
-require-relative 'src/user'           # importing User class
-require-relative 'src/configuration'  # importing constants EMAIL and NAME from configuration.rb
-require-relative 'src/messages'       # importing methods from messages.rb
+require_relative 'src/todo_item'      # importing ToDoItem class
+require_relative 'src/todo_list'      # importing ToDoList class
+require_relative 'src/user'           # importing User class
+require_relative 'src/configuration'  # importing constants EMAIL and NAME from configuration.rb
+require_relative 'src/messages'       # importing methods from messages.rb
 
 require 'pp' # https://ruby-doc.org/stdlib-2.4.1/libdoc/pp/rdoc/PP.html
 require 'colorize' # https://github.com/fazibear/colorize

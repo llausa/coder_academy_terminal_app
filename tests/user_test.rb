@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'test/unit' # https://www.rubydoc.info/gems/test-unit/2.3.1/Test/Unit
-require-relative 'src/user' # importing User class
-require-relative 'src/configuration' # loading confirguation.rb file for EMAIL and TOKEN constants
+require_relative 'src/user' # importing User class
+require_relative 'src/configuration' # loading confirguation.rb file for EMAIL and TOKEN constants
 
 # Setup tests for the User class
 class UserTest < Test::Unit::TestCase

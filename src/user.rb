@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require-relative 'configuration' # loading confirguation.rb file for EMAIL and NAME constants
+require_relative 'configuration' # loading confirguation.rb file for EMAIL and NAME constants
 
 # Initializing User class which holds the outline for the User in the app
 class User
