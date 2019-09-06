@@ -121,7 +121,7 @@
     Any other response status codes will output the body and header of the response so the User can troubleshoot with Sendgrid.
 
 ## Control Flow Diagram
-  ![control_flow_diagram]()
+  ![control_flow_diagram](https://github.com/llausa/coder_academy_terminal_app/blob/master/imgs/Control%20Flow.png)
 
 ## Implementation Plan
   The Implementation Plan can be found on the following [Trello board](https://trello.com/b/cN91PAk8/shtda-terminal-app-coder-academy).
